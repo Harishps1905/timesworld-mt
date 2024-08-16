@@ -1,0 +1,8 @@
+.visually-hidden{
+    display: none;
+}
+.carousel-indicators button{
+    border-radius: 34px !important;
+    height: 15px !important;
+    width: 8px !important;
+}

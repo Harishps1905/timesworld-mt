@@ -1,0 +1,8 @@
+.line{
+    height: 2px;
+    background: #000;
+}
+.title{
+    font-size: 45px;
+    font-weight: 700;
+}

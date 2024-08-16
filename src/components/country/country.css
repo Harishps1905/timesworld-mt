@@ -1,0 +1,19 @@
+.country{
+    border: 2px solid #3E3E3E;
+    margin: 7px 0;
+    padding: 5px;
+    box-shadow: 9px 11px 0px 0px #d7d7d7;
+    height: 68px;
+    max-height: 130px;
+}
+.parent{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+.cntryname{
+    font-size: 16px;
+    font-weight: 600;
+}
