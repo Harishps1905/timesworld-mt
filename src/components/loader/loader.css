@@ -1,0 +1,27 @@
+/* loader.css */
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* Background color of the loader container */
+  }
+  
+  .custom-placeholder {
+    margin-bottom: 10px;
+    height: 20px; /* Custom height */
+    border-radius: 5px; /* Custom border radius */
+  }
+  
+  /* Example of overriding Bootstrap bg- classes if needed */
+  .custom-placeholder.bg-primary {
+    background-color: #007bff !important; /* Adjust primary color */
+  }
+  
+  .custom-placeholder.bg-secondary {
+    background-color: #6c757d !important; /* Adjust secondary color */
+  }
+  
+  /* Add additional customization as needed */
+  

@@ -6,3 +6,6 @@
     height: 15px !important;
     width: 8px !important;
 }
+.carousel .carousel-inner, .carousel-item{
+    height: 100%;
+}

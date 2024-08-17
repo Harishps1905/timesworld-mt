@@ -1,3 +1,6 @@
+#footer{
+    margin: 50px auto 30px;
+}
 .footer-cont{
     display: flex;
     width: 270px;
@@ -9,18 +12,28 @@
 .contact{
     margin: 20px auto;
 }
-.contact a{
+.copyright, .contact a{
     font-size: 10px;
     font-weight: 700;
     line-height: 16px;
     letter-spacing: 0.02em;
     text-align: center;
+
 }
-.copyright{
-    font-size: 10px;
-    font-weight: 700;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    text-align: center;
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .copyright, .contact a{
+        font-family: Noto Sans;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: 0.03em;
+        text-align: center;
+
+    }
 
 }
