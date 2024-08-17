@@ -23,10 +23,14 @@ const Signin = () => {
             return;
         }
         // Implement your login logic here
-        let user = await userSignIn(username, password)
-        console.log("Logged in");
-        
-    navigate('/');
+        try {
+            let user = await userSignIn(username, password)
+            console.log("Logged in");
+            navigate('/');
+            
+          } catch (error) {
+            alert(error.message)
+          }
     }
 
 
