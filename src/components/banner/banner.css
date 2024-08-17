@@ -1,7 +1,20 @@
-.bimage{
-    width: 100%;
-    height: auto;
+.bimage {
+  width: 100%;
+  height: auto;
 }
-.b-cont{
-    padding: 20px 0;
+.b-cont {
+  padding: 20px 0;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .bimage {
+        width: auto;
+        height: 100%;
+    }
+  .b-cont {
+    height: 100%;
+    overflow: hidden;
+    padding: 0 !important;
+  }
 }

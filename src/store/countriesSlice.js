@@ -3,12 +3,8 @@ import { axiosInstance } from '../services/service';
 
 // Async Thunk for fetching countries data
 export const fetchCountries = createAsyncThunk('countries/fetchCountries', async () => {
-  console.log("response");
-
 //   const response = await axiosInstance.get('/all?fields=name,region,flag');
   const response = await fetch('https://restcountries.com/v2/all?fields=name,region,flag');
-  console.log(response, "response");
-  
   const data = await response.json();
   return data;
 });

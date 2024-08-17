@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import './Navigationbar.css'
 import { useDispatch } from 'react-redux';
 import { setContinent } from '../../store/countriesSlice';
+import { userSignOut } from '../../firebase/auth';
 
 
 const Navigationbar = () => {
@@ -21,7 +22,6 @@ const Navigationbar = () => {
       behavior: 'smooth'
     });
   };
-
   return (
     <Navbar sticky="top" expand="lg" className="bg-body-tertiary bg-white">
       <Container>
@@ -34,11 +34,17 @@ const Navigationbar = () => {
                 key={continent}
                 className={activeLink === continent ? 'nav-link activeLink': 'nav-link' }
                 onClick={handleClick}
-                style={{ color: activeLink === continent ? 'red' : 'black' }}
+                style={{ color: activeLink === continent ? '#3D3D3D' : '#8B8B8B' }}
               >
                 {continent}
               </span>
             ))}
+            <span
+                className={'nav-link'}
+                onClick={()=>userSignOut()}
+              >
+                Sign Out
+              </span>
           </Nav>
         </Navbar.Collapse>
       </Container>

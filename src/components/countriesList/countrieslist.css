@@ -7,6 +7,7 @@
     height: 48px;
     background: #3C3C3C;
     color: #fff;
+    border: none;
 }
 #loadmore-cont{
     margin: 20px auto;
