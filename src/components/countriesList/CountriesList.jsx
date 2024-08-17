@@ -49,18 +49,19 @@ const CountriesList = () => {
           </Row>
         </Container>
       </div>
-
+      <div id="loadmore-cont">
       <Container>
         <Row>
-            <Col>
+            <Col className="a-center">
                 {visibleCountries < countriesLocal?.length && (
-                    <button onClick={loadMoreCountries} disabled={loading}>
+                    <button id="loadmore" size="lg"  className="" onClick={loadMoreCountries} disabled={loading}>
                     Load More
                     </button>
                 )}
             </Col>
         </Row>
       </Container>
+      </div>
     </section>
   );
 };

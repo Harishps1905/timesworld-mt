@@ -3,31 +3,39 @@ import "./signin.css";
 import { Button, Col, Container, Form, InputGroup, Row } from "react-bootstrap";
 import Icon from "../Icon";
 import validatePassword from "../../utils/validatePassword";
+import google from './assets/icons/google.png'
+import facebook from './assets/icons/facebook.png'
+import linkedin from './assets/icons/linkedin.png'
+import twitter from './assets/icons/twitter.png'
+import { userSignIn, userRegister } from "../../firebase/auth";
+import Signup from "../signup/Signup";
+import { useNavigate } from "react-router-dom";
 
 const Signin = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-
-    const handlePass = (e) => {
-        setPassword(e.target.value);
-    }
-    
-    const handleSubmit = (e) => {
+    const [modalShow, setModalShow] = useState(false);
+    const navigate = useNavigate();
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validatePassword(password)) {
             alert("Password should contain at least 8 characters, including at least one uppercase letter, one lowercase letter, one number, and one special character.");
             return;
         }
         // Implement your login logic here
-        console.log("Logged in with password:", password);
+        let user = await userSignIn(username, password)
+        console.log("Logged in with password:", user);
+        
+    navigate('/');
     }
 
 
   return (
+    <>
     <div id="signin">
         <h1 id="signin-head">Sign In</h1>
         <div id="si-cont-one">
-            <span id="newuser">New user?</span><span id="reg-link">Create an account</span>
+            <span id="newuser">New user?</span><span id="reg-link" onClick={() => setModalShow(true)} >Create an account</span>
         </div>
         <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formGroupEmail">
@@ -53,11 +61,11 @@ const Signin = () => {
                     <Container>
                         <Row>
                             <Col xs={3} md={3}>
-                                <img width={48} height={48} src="src\components\signin\assets\icons\google.png" alt="google" />
+                                <img width={48} height={48} src={google} alt="google" />
                             </Col>
-                            <Icon img="src\components\signin\assets\icons\facebook.png" alt="facebook"/>
-                            <Icon img="src\components\signin\assets\icons\linkedin.png" alt="linkedin"/>
-                            <Icon img="src\components\signin\assets\icons\twitter.png" alt="twitter"/>
+                            <Icon img={facebook} alt="facebook"/>
+                            <Icon img={linkedin} alt="linkedin"/>
+                            <Icon img={twitter} alt="twitter"/>
                             
                         </Row>
                     </Container>
@@ -66,6 +74,11 @@ const Signin = () => {
             </div>
         </Form>
     </div>
+    <Signup
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+    </>
   );
 };
 
