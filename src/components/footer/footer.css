@@ -1,0 +1,26 @@
+.footer-cont{
+    display: flex;
+    width: 270px;
+}
+.a-center{
+    display: flex;
+    justify-content: center;
+}
+.contact{
+    margin: 20px auto;
+}
+.contact a{
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+.copyright{
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-align: center;
+
+}

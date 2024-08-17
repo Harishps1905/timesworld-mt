@@ -16,4 +16,11 @@
 .cntryname{
     font-size: 16px;
     font-weight: 600;
+    margin: 0 !important;
+}
+.child{
+    padding: 10px;
+}
+.region{
+    margin: 0 !important;
 }
