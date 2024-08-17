@@ -1,6 +1,5 @@
 import React from "react";
 import useAuth from "../hooks/useAuth";
-import RedirectToLogin from "../components/redirectToLogin/redirectToLogin";
 import { useNavigate } from "react-router-dom";
 import Loader from "../components/loader/Loader";
 
