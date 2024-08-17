@@ -25,7 +25,7 @@ const Navigationbar = () => {
   return (
     <Navbar sticky="top" expand="lg" className="bg-body-tertiary bg-white">
       <Container>
-        <Navbar.Brand href="#home">Countries</Navbar.Brand>
+        <Navbar.Brand href="#" className="nav-title" >Countries</Navbar.Brand>
         <Navbar.Toggle className='border-none' aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className=' ms-auto justify-content-end'>
           <Nav className="ms-auto justify-content-end">
