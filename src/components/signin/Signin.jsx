@@ -23,10 +23,14 @@ const Signin = () => {
             return;
         }
         // Implement your login logic here
-        let user = await userSignIn(username, password)
-        console.log("Logged in with password:", user);
-        
-    navigate('/');
+        try {
+            let user = await userSignIn(username, password)
+            console.log("Logged in");
+            navigate('/');
+            
+          } catch (error) {
+            alert(error.message)
+          }
     }
 
 
@@ -39,7 +43,7 @@ const Signin = () => {
         </div>
         <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formGroupEmail">
-                <Form.Control type="text" className="ip-border" placeholder="Username or email" onChange={(e)=>setUsername(e.target.value)} required />
+                <Form.Control type="email" className="ip-border" placeholder="Email" onChange={(e)=>setUsername(e.target.value)} required />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formGroupPassword">
                 <Form.Control type="password" className="ip-border pass" placeholder="Password" onChange={(e)=>setPassword(e.target.value)} value={password} required />
