@@ -35,5 +35,6 @@ export const userSignOut = async () => {
       return "Sign-out successful";
     } catch (error) {
       console.log(error);
+
     }
 }

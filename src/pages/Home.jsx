@@ -14,7 +14,6 @@ import { Container, Row } from "react-bootstrap";
 function Home() {
   // userSignOut();
   const { user, loading, error } = useAuth();
-  console.log(user, "Welcome");
   const AuthCountriesList = withAuth(CountriesList);
 
   return (

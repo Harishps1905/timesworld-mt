@@ -20,10 +20,14 @@ function Signup(props) {
             alert("Password should contain at least 8 characters, including at least one uppercase letter, one lowercase letter, one number, and one special character.");
             return;
         }
-        // Implement your login logic here
-        let user = await userRegister(username, password)
-        console.log("registered in with password:", user);
-        navigate('/');
+        try {
+          let user = await userRegister(username, password)
+          console.log("Registered");
+          navigate('/');
+          
+        } catch (error) {
+          alert(error.message)
+        }
     }
     return (
       <Modal
@@ -40,7 +44,7 @@ function Signup(props) {
         <Modal.Body>
         <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formGroupEmail">
-                <Form.Control type="text" className="ip-border" placeholder="Username or email" onChange={(e)=>setUsername(e.target.value)} required />
+                <Form.Control type="email" className="ip-border" placeholder="Email" onChange={(e)=>setUsername(e.target.value)} required />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formGroupPassword">
                 <Form.Control type="password" className="ip-border pass" placeholder="Password" onChange={(e)=>setPassword(e.target.value)} value={password} required />
