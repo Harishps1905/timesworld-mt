@@ -37,7 +37,7 @@ const Signin = () => {
   return (
     <>
     <div id="signin">
-        <h1 id="signin-head">Sign In</h1>
+        <h1 id="signin-head" className="text-center">Sign In</h1>
         <div id="si-cont-one">
             <span id="newuser">New user?</span><span id="reg-link" onClick={() => setModalShow(true)} >Create an account</span>
         </div>
@@ -64,13 +64,11 @@ const Signin = () => {
                 <div id="sm-icons">
                     <Container>
                         <Row>
-                            <Col xs={3} md={3}>
-                                <img width={48} height={48} src={google} alt="google" />
-                            </Col>
+                            {[google, facebook, linkedin, twitter].map((sm)=><Icon img={sm} alt={sm}/>)}
+                            {/* <Icon img={google} alt="google"/>
                             <Icon img={facebook} alt="facebook"/>
                             <Icon img={linkedin} alt="linkedin"/>
-                            <Icon img={twitter} alt="twitter"/>
-                            
+                            <Icon img={twitter} alt="twitter"/> */}
                         </Row>
                     </Container>
                     
