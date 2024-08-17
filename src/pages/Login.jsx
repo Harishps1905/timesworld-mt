@@ -11,7 +11,7 @@ export const Login = () => {
         </Col>
         <Col className='hide' md={6}>
           <aside id='si-rgtcont'>
-            <img id='si-img'  src="src\assets\signinimg.png" alt="" />
+            <img id='si-img'  src="src/assets/signinimg.png" alt="" />
           </aside>
         </Col>
       </Row>

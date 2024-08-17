@@ -12,7 +12,7 @@ function Home() {
     <>
       <Navigationbar />
       <Welcome />
-      <Banner bimage="src\components\banner\assets\flags.jpg" />
+      <Banner bimage="src/components/banner/assets/flags.jpg" />
       <Slider />
       <CountriesList/>
     </>
