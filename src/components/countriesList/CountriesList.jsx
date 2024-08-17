@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { countriesState, fetchCountries } from "../../store/countriesSlice";
 import { Col, Container, Row } from "react-bootstrap";
-import './Countrieslist.css';
+import './countrieslist.css';
 import Country from "../country/Country";
 
 
